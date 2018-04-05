@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eddiegosneyphotography</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <header>
+      <h1>Eddie Gosney</h1>
+      <nav>
+        <ul>
+          <li>Landscapes</li>
+          <li>Portraits</li>
+          <li>Still Life</li>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+
+    <footer class="footer">
+
+    <p>Copyright © 2018 |</p>
+    <div>
+      <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com 
+      </a>
+    </div>
+
+  </footer>
+  </body>
+</html>
