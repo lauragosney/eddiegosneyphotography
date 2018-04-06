@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+$white: #ffffff;
+$black: #000000;
+$font:'Source Sans Pro',  Helvetica, Arial, sans-serif;
+
+$bold: 700;
+$regular: 400;
+
+$h1:30px;
+$h2:60px;
+$h3:28px;
+$h4:20px;
+$h5:18px;
+$h6:14px;
+$body: 16px;
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+  font-wwight: $bold;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h5 {
+  font-size: $h5;
+}
+
+h6 {
+  font-size: $h6;
+}
+
+
+body {
+  font-family: $font;
+  font-weight:$regular;
+  font-size: $body;
+  line-height: 1.5;
+  color: $black;
+  padding: 20px 40px 20px 40px;
+}
+
+a {
+  color: $black;
+  font-size:$h6;
+}
+
+
+
+header {
+
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  h1 a {
+    font-weight: $bold;
+    font-size: $h1;
+  }
+
+  nav a {
+  font-weight: $bold;
+  font-size: $h5;
+  padding-left:30px;
+  }
+
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+  font-size: $h6;
+  justify-content: center;
+
+  p:after {
+      content: "|";
+      margin-left:10px;
+      margin-right:10px;
+    }
+
+    p:nth-child(3):after {
+      content: "";
+    }
+}
+
+.container {
+  max-width: 1260px;
+  margin: 60px auto 60px auto;
+}
+
+.about {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .about-image {
+    width: 60%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .about-copy {
+    width: 40%;
+    padding:40px;
+
+    p {
+      padding-bottom:20px;
+    }
+  }
+}
+
+.contact {
+  text-align:center;
+
+  a {
+    font-size: $h2;
+    font-weight: $bold;
+  }
+}
