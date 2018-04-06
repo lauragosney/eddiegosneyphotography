@@ -1,6 +1,6 @@
 ActiveAdmin.register Photo do
 
-  permit_params :title, :image_1, :description, :is_sold_out
+  permit_params :title, :image_1, :description, :is_sold_out, category_id:[]
 
   show do
     attributes_table do
@@ -10,7 +10,13 @@ ActiveAdmin.register Photo do
      end
      row :description
      row :is_sold_out
-     end
+
+     row :categories do |category|
+        category.categories.all.map do |t|
+          t.title
+        end
+      end
+    end
       active_admin_comments
   end
 
@@ -24,7 +30,13 @@ ActiveAdmin.register Photo do
       column :description
       column :is_sold_out
 
-    actions
+      column :categories do |category|
+        category.categories.all.map do |t|
+        t.title
+        end
+      end
+
+      actions
   end
 
   form do |f|
@@ -41,6 +53,10 @@ ActiveAdmin.register Photo do
     f.inputs "Images" do
       f.input :image_1
     end
+
+    f.inputs "Categories" do
+        f.input :categories, as: :check_boxes, collection: Category.order("title asc")
+     end
 
     f.actions
 

@@ -12,13 +12,17 @@
 
     <header>
 
+
+
+
       <h1><%=link_to "Eddie Gosney", root_path %></h1>
       <nav>
-          <%=link_to "Portraits", root_path %></h1>
-          <%=link_to "Landscapes", root_path %></h1>
-          <%=link_to "Still life", root_path %></h1>
-          <%=link_to "About", about_path %></h1>
-          <%=link_to "Contact", contact_path %></h1>
+          <% Category.all.each do |cat| %>
+            <%= active_link_to cat.title, root_path(category: cat.title), active:{category: cat.title} %>
+          <% end %>
+
+          <%=link_to "About", about_path %>
+          <%=link_to "Contact", contact_path %>
       </nav>
     </header>
     <%= yield %>

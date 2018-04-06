@@ -13,7 +13,7 @@ $h3:28px;
 $h4:20px;
 $h5:18px;
 $h6:14px;
-$body: 16px;
+$body:16px;
 
 h1 {
   font-size: $h1;
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   font-size: $h2;
-  font-wwight: $bold;
+  font-weight: $bold;
 }
 
 h3 {
@@ -98,6 +98,7 @@ footer {
 
 .container {
   max-width: 1260px;
+  min-height: 580px;
   margin: 60px auto 60px auto;
 }
 
