@@ -11,25 +11,25 @@
   <body>
 
     <header>
-      <h1>Eddie Gosney</h1>
+
+      <h1><%=link_to "Eddie Gosney", root_path %></h1>
       <nav>
-        <ul>
-          <li>Landscapes</li>
-          <li>Portraits</li>
-          <li>Still Life</li>
-        </ul>
+          <%=link_to "Portraits", root_path %></h1>
+          <%=link_to "Landscapes", root_path %></h1>
+          <%=link_to "Still life", root_path %></h1>
+          <%=link_to "About", about_path %></h1>
+          <%=link_to "Contact", contact_path %></h1>
       </nav>
     </header>
     <%= yield %>
 
     <footer class="footer">
 
-    <p>Copyright © 2018 |</p>
-    <div>
-      <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com 
-      </a>
-    </div>
-
+        <p>Copyright © 2018</p>
+        <div>
+          <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com
+          </a>
+        </div>
   </footer>
   </body>
 </html>
