@@ -6,6 +6,8 @@ class Photo < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :categories, presence: true
+  validates :size, presence: true
+  validates :price_details, presence: true
 
 
   mount_uploader :image_1, PhotoImageUploader

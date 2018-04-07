@@ -11,29 +11,26 @@
   <body>
 
     <header>
-
-
-
-
       <h1><%=link_to "Eddie Gosney", root_path %></h1>
-      <nav>
+      <nav class="active">
           <% Category.all.each do |cat| %>
             <%= active_link_to cat.title, root_path(category: cat.title), active:{category: cat.title} %>
           <% end %>
 
-          <%=link_to "About", about_path %>
-          <%=link_to "Contact", contact_path %>
+          <%= active_link_to "About", about_path %>
+          <%= active_link_to "Contact", contact_path %>
       </nav>
     </header>
+
     <%= yield %>
 
     <footer class="footer">
-
         <p>Copyright © 2018</p>
         <div>
           <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com
           </a>
         </div>
-  </footer>
+      </footer>
+      
   </body>
 </html>

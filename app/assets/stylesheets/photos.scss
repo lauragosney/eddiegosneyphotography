@@ -17,3 +17,22 @@
     }
   }
 }
+
+.photo-show {
+  display: flex;
+  flex-wrap: wrap;
+
+  .photo-show-image {
+    width:70%;
+    text-align: center;
+  }
+
+  .photo-show-copy {
+    width: 30%;
+    padding-left:20px;
+
+    p {
+      padding-top:20px;
+    }
+  }
+}

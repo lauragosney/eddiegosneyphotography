@@ -1,2 +1,23 @@
-<%= @photo.title %>
-<%= image_tag @photo.image_1.large %>
+<section class="container">
+  <div class="photo-show">
+    <div class="photo-show-image">
+      <%= image_tag @photo.image_1.large %>
+    </div>
+
+    <div class="photo-show-copy">
+      <h3><%= @photo.title %></h3>
+      <p><%= @photo.description %></p>
+      <p><%= @photo.size %></p>
+      <p><%= @photo.price_details%></p>
+
+      <% if @photo.is_sold_out?%>
+        <div class="sold-out">
+          <p>Sold out</p>
+        </div>
+      <%end%>
+
+    </div>
+
+  </div>
+
+</section>

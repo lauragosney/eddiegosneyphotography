@@ -1,6 +1,6 @@
 ActiveAdmin.register Photo do
 
-  permit_params :title, :image_1, :description, :is_sold_out, category_id:[]
+  permit_params :title, :image_1, :description, :is_sold_out, :price_details, :size, category_id:[]
 
   show do
     attributes_table do
@@ -9,6 +9,8 @@ ActiveAdmin.register Photo do
        image_tag photo.image_1.thumb, width: "40"
      end
      row :description
+     row :size
+     row :price_details
      row :is_sold_out
 
      row :categories do |category|
@@ -28,6 +30,8 @@ ActiveAdmin.register Photo do
       end
       column :title
       column :description
+      column :size
+      column :price_details
       column :is_sold_out
 
       column :categories do |category|
@@ -44,6 +48,8 @@ ActiveAdmin.register Photo do
     f.inputs "Photo" do
       f.input :title
       f.input :description
+      f.input :size
+      f.input :price_details
     end
 
     f.inputs "FIlters" do
