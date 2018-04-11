@@ -11,12 +11,39 @@
       <p><%= @photo.price_details%></p>
 
       <% if @photo.is_sold_out?%>
-        <div class="sold-out">
-          <p>Sold out</p>
+        <div class="sold">
+          <p>Sold</p>
         </div>
       <%end%>
 
+
+      <div class="button-secondary">
+
+        <div>
+        <%= link_to root_path do %>
+          <%= image_tag "arrow_left.svg" %>Back to gallery
+        <% end %>
+        </div>
+
+        <div>
+          <%= link_to root_path do %>
+            <%= image_tag "arrow_left.svg" %>Previous /
+          <% end %>
+
+          <%= link_to root_path do %>
+            Next <%= image_tag "arrow_right.svg"%>
+          <% end %>
+        </div>
+
+      </div>
+
+
+
+
     </div>
+
+
+
 
   </div>
 

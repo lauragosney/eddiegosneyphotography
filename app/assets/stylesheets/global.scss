@@ -2,6 +2,8 @@
 
 $white: #ffffff;
 $black: #000000;
+$red: #EE3322;
+
 $font:'Source Sans Pro',  Helvetica, Arial, sans-serif;
 
 $bold: 700;
@@ -54,7 +56,6 @@ a {
   color: $black;
   font-size:$h6;
 }
-
 
 
 header {
@@ -128,8 +129,6 @@ footer {
 }
 
 .container {
-  max-width: 1260px;
-  margin: 40px auto 40px auto;
   min-height: 75vh;
 }
 
@@ -168,10 +167,47 @@ footer {
 }
 
 section {
-  opacity: 1;
+  max-width: 1260px;
+  margin: 40px auto 40px auto;
   transition: 0.5s;
 }
 
-.fadeIn {
-  opacity: 1;
+
+.sold {
+  color: $red;
+  text-transform: uppercase;
 }
+
+.exhibitions li,
+.instagram {
+  text-align: center;
+  margin-bottom: 120px;
+
+  h3 {
+    margin-bottom:40px;
+  }
+
+  h2 {
+    margin-bottom:20px;
+  }
+}
+
+.button-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  img {
+    vertical-align: middle;
+    margin-left: 5px;
+    transition: all 0.3s;
+  }
+}
+
+.button-secondary:hover  {
+
+    img {
+      transform: translate(5px,0);
+    }
+  }

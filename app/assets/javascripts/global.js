@@ -1,20 +1,19 @@
-const navLinks = document.querySelectorAll('header a')
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navlinks = document.querySelectorAll('header a')
 
 
-navLinks.forEach(link => {
+    navlinks.forEach(link => {
 
-  link.addEventListener('click', (event) => {
-      event.preventDefault()
+      link.addEventListener('click', (event) => {
 
-      const href = link.getAttribute('href')
+            event.preventDefault()
 
-      document.querySelector(href).setTimeout(() => {
-          window.location = href
-        }, 1500)
+            const content = document.querySelectorAll(‘section’)
+            content.classList.add(‘fadeIn’)
 
-       const content = document.querySelectorAll('section')
-       content.classList.add('fadeIn')
 
+
+        })
+      })
     })
-
-  })

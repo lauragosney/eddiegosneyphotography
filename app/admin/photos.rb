@@ -1,6 +1,6 @@
 ActiveAdmin.register Photo do
 
-  permit_params :title, :image_1, :description, :is_sold_out, :price_details, :size, category_id:[]
+  permit_params :title, :image_1, :description, :is_sold_out, :price_details, :size, category_ids:[]
 
   show do
     attributes_table do

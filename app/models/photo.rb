@@ -1,7 +1,7 @@
 class Photo < ApplicationRecord
 
   has_many :category_photos
-  has_many :categories, through: :category_photos
+  has_many :categories, through: :category_photos, dependent: :destroy
 
   validates :title, presence: true
   validates :description, presence: true
