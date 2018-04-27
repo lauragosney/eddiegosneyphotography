@@ -14,8 +14,16 @@
     img {
       width:100%;
       margin-bottom: 10px;
+      box-shadow: none;
+      transition: box-shadow .5s,transform .5s;
+      transform: translate(0,0);
     }
   }
+}
+
+.photo:hover img {
+  box-shadow: 0 12px 7px -7px rgba(0,0,0,.1);
+  transform: translate(0,-5px);
 }
 
 .photo-show {

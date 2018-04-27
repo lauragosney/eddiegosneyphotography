@@ -1,19 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const navlinks = document.querySelectorAll('header a')
+      inView('section')
+        .on('enter', section => {
+        section.classList.add('in-viewport')
+        })
+        .on('exit', section => {
+            section.classList.remove('in-viewport')
+        })
+        inView.threshold(0.2)
 
 
-    navlinks.forEach(link => {
+        const sections = document.querySelectorAll('section')
 
-      link.addEventListener('click', (event) => {
+        sections.forEach((section, index) => {
 
-            event.preventDefault()
+          const exhibitions = section.querySelectorAll('.exhibitions li')
 
-            const content = document.querySelectorAll(‘section’)
-            content.classList.add(‘fadeIn’)
+          exhibitions.forEach((exhibition, index) => {
 
-
+            const delay = index * 500
+            exhibition.style.transitionDelay = delay + 'ms'
+          })
 
         })
-      })
-    })
+
+})

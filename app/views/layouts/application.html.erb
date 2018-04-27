@@ -4,6 +4,8 @@
     <title>Eddiegosneyphotography</title>
     <%= csrf_meta_tags %>
 
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,7 +14,7 @@
 
     <header>
       <h1><%=link_to "Eddie Gosney", root_path %></h1>
-      <nav class="active">
+      <nav class="active link-underline">
           <% Category.all.each do |cat| %>
             <%= active_link_to cat.title, root_path(category: cat.title), active:{category: cat.title} %>
           <% end %>
@@ -25,13 +27,16 @@
       <%= yield %>
 
 
-    <footer class="footer">
+    <footer class="footer link-underline">
         <p>Copyright © 2018</p>
         <div>
           <a href="https://www.lauragosney.com/" target="_blank">  Site by lauragosney.com
           </a>
         </div>
       </footer>
+
+      <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
+
 
   </body>
 </html>

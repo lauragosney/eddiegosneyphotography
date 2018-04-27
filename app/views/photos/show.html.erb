@@ -16,26 +16,35 @@
         </div>
       <%end%>
 
+      <div class="buttons margin-top-max">
 
-      <div class="button-secondary">
-
-        <div>
+        <div class="button-secondary">
         <%= link_to root_path do %>
-          <%= image_tag "arrow_left.svg" %>Back to gallery
+          <%= image_tag "arrow_left.svg", class: "button-image-left" %>Back to gallery
         <% end %>
         </div>
 
-        <div>
-          <%= link_to root_path do %>
-            <%= image_tag "arrow_left.svg" %>Previous /
-          <% end %>
 
-          <%= link_to root_path do %>
-            Next <%= image_tag "arrow_right.svg"%>
-          <% end %>
-        </div>
+          <div class="buttons">
+            <div class="button-secondary">
+              <%= link_to root_path do %>
+                <%= image_tag "arrow_left.svg", class: "button-image-left"  %>Previous /
+              <% end %>
+            </div>
 
-      </div>
+            <div class="button-secondary">
+              <%= link_to root_path do %>
+              Next <%= image_tag "arrow_right.svg", class: "button-image-right" %>
+              <% end %>
+            </div>
+          </div>
+
+    </div>
+
+
+
+
+
 
 
 
