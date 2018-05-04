@@ -12,4 +12,13 @@ class Photo < ApplicationRecord
 
   mount_uploader :image_1, PhotoImageUploader
 
+  def next
+    self.class.where("created_at < ?", self.created_at).order("created_at DESC").first
+  end
+
+  def previous
+    self.class.where("created_at > ?", self.created_at).order("created_at ASC").first
+  end
+
+
 end

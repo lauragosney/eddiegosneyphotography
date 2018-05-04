@@ -22,6 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
             exhibition.style.transitionDelay = delay + 'ms'
           })
 
+          const photos = section.querySelectorAll('.photo')
+
+          photos.forEach((photo, index) => {
+
+            const delay = index * 300
+            photo.style.transitionDelay = delay + 'ms'
+          })
+
         })
 
-})
+      })

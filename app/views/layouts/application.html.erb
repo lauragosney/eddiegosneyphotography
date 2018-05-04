@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Eddiegosneyphotography</title>
-    <%= csrf_meta_tags %>
+    <title>Eddie Gosney Photography</title>
+    <%= favicon_link_tag 'favicon.png' %>
 
+    <%= csrf_meta_tags %>
 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -34,6 +35,20 @@
           </a>
         </div>
       </footer>
+
+      <script src="https://github.com/stevenschobert/instafeed.js"></script>
+      <script>
+        var feed = new Instafeed({
+          get: 'user',
+          userId: 5519850249,
+          accessToken: '5519850249.361fb96.58bc8efa50244819bae3a34a249fde12',
+          limit: 8,
+          resolution: 'low_resolution',
+          template:'<div class="instapic"><a href="{{link}}" target="_blank"><div class="overlay"><div class="caption"><h5>{{likes}}</h5><h5>{{caption}}</h5></div></div><img class="insta-image" src="{{image}}"/></a></div>',
+        });
+
+        feed.run();
+      </script>
 
       <script src="https://unpkg.com/in-view@0.6.1/dist/in-view.min.js"></script>
 

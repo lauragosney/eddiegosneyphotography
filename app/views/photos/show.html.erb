@@ -27,15 +27,20 @@
 
           <div class="buttons">
             <div class="button-secondary">
-              <%= link_to root_path do %>
+              <% if @photo.previous.present? %>
+                  <%= link_to photo_path(@photo.previous) do  %>
                 <%= image_tag "arrow_left.svg", class: "button-image-left"  %>Previous /
+                <% end %>
               <% end %>
+
             </div>
 
             <div class="button-secondary">
-              <%= link_to root_path do %>
-              Next <%= image_tag "arrow_right.svg", class: "button-image-right" %>
-              <% end %>
+                <% if @photo.next.present? %>
+                  <%= link_to photo_path(@photo.next) do  %>
+                  Next <%= image_tag "arrow_right.svg", class: "button-image-right" %>
+                  <% end %>
+                <% end %>
             </div>
           </div>
 
