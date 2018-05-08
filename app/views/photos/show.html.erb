@@ -1,5 +1,5 @@
-<section class="container">
-  <div class="photo-show">
+<section class="min-height">
+  <div class="photo-show fadein">
     <div class="photo-show-image">
       <%= image_tag @photo.image_1.large %>
     </div>
@@ -35,7 +35,7 @@
 
             </div>
 
-            <div class="button-secondary">
+            <div class="button-secondary" id="next">
                 <% if @photo.next.present? %>
                   <%= link_to photo_path(@photo.next) do  %>
                   Next <%= image_tag "arrow_right.svg", class: "button-image-right" %>

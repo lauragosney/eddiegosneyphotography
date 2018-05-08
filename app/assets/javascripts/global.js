@@ -14,22 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sections.forEach((section, index) => {
 
-          const exhibitions = section.querySelectorAll('.exhibitions li')
+          const fadeinLi = section.querySelectorAll('.fadein li')
 
-          exhibitions.forEach((exhibition, index) => {
-
-            const delay = index * 500
-            exhibition.style.transitionDelay = delay + 'ms'
-          })
-
-          const photos = section.querySelectorAll('.photo')
-
-          photos.forEach((photo, index) => {
+          fadeinLi.forEach((fadeinLi, index) => {
 
             const delay = index * 300
-            photo.style.transitionDelay = delay + 'ms'
+            fadeinLi.style.transitionDelay = delay + 'ms'
+          })
+
+          const fadein = section.querySelectorAll('.fadein')
+
+          fadein.forEach((fadein, index) => {
+
+            const delay = index * 300
+            fadein.style.transitionDelay = delay + 'ms'
           })
 
         })
-
-      })
+  })

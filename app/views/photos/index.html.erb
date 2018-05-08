@@ -1,11 +1,11 @@
 
-<section class="container">
+<section class="min-height">
 
   <div class="photos">
 
     <% @photos.each do |photo| %>
 
-      <div class="photo">
+      <div class="photo fadein">
 
         <%= link_to photo_path(photo) do %>
             <%= image_tag photo.image_1.medium %>
@@ -21,8 +21,8 @@
 </section>
 
 
-<section class="container">
-    <ul class="exhibitions">
+<section>
+    <ul class="exhibitions fadein">
       <li>
         <h3>
           Current exhibitions
@@ -52,7 +52,7 @@
 
 <section>
 
-  <div class="instagram">
+  <div class="instagram fadein">
     <h3>@gosney_art</h3>
     <div class="insta-container"  id="instafeed"></div>
   </div>
