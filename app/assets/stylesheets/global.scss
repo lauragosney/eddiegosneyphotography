@@ -183,6 +183,10 @@ section {
   h2 {
     margin-bottom:20px;
   }
+
+  a {
+    font-size: $h3;
+  }
 }
 
 .buttons {
@@ -259,6 +263,7 @@ section {
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 40px;
 }
 
 .instapic {
@@ -414,6 +419,16 @@ section {
       font-size: $h2;
     }
   }
+
+  .instagram {
+    a {
+      font-size: $h3;
+    }
+  }
+
+  .insta-container {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -480,6 +495,10 @@ section {
 
     h2 {
       margin-bottom:20px;
+    }
+
+    a {
+      font-size: $h3;
     }
   }
 
