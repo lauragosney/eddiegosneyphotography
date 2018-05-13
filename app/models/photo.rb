@@ -12,6 +12,10 @@ class Photo < ApplicationRecord
 
   mount_uploader :image_1, PhotoImageUploader
 
+  def to_param
+    id.to_s + "-" + title.parameterize
+  end
+
   def next
     self.class.where("created_at < ?", self.created_at).order("created_at DESC").first
   end
