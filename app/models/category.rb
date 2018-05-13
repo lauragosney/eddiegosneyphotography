@@ -5,4 +5,7 @@ class Category < ApplicationRecord
 
   validates :title, presence: true
 
+  def to_param
+    id.to_s + "-" + title.parameterize
+  end
 end
