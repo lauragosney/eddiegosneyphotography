@@ -27,7 +27,8 @@
       <nav class="active link-underline">
 
 
-        <%= active_link_to "All photos", root_path %>
+        <%= active_link_to "All photos", root_path, active: {category: nil, category_id: nil} %>
+
 
           <% Category.all.each do |cat| %>
             <%= active_link_to cat.title, root_path(category: cat.title), active:{category: cat.title} %>
