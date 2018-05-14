@@ -27,15 +27,17 @@
       <nav class="active link-underline">
 
 
-        <%= active_link_to "All photos", root_path, active: {category: nil, category_id: nil} %>
+        <!-- <%= active_link_to "All photos", root_path, active: {category: nil, category_id: nil} %> -->
+
+        <%= active_link_to "All photos", root_path, active: :exact %>
 
 
           <% Category.all.each do |cat| %>
-            <%= active_link_to cat.title, root_path(category: cat.title), active:{category: cat.title} %>
+            <%= active_link_to cat.title, root_path(category: cat.title), active: :exact %>
           <% end %>
 
-          <%= active_link_to "About", about_path %>
-          <%= active_link_to "Contact", contact_path %>
+          <%= active_link_to "About", about_path, active: :exact %>
+          <%= active_link_to "Contact", contact_path, active: :exact %>
       </nav>
     </header>
 
