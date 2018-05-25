@@ -12,6 +12,7 @@
  *
  *= require base
  *= require global
+ *= require newsletter
  *= require photos
  *= require_self
  */

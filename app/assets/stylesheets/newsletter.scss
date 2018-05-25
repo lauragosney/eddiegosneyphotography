@@ -1,0 +1,110 @@
+// Place all the styles related to the newsletter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #ffffff;
+$black: #000000;
+$grey: #b9b9b9;
+$red: #EE3322;
+
+$font:'Source Sans Pro',  Helvetica, Arial, sans-serif;
+
+$bold: 700;
+$regular: 400;
+
+$h1:30px;
+$h2:42px;
+$h3:28px;
+$h4:20px;
+$h5:18px;
+$h6:14px;
+$body:16px;
+
+input {
+    border: 1px solid $grey;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+    width: 100%;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 1px solid $grey;
+    background-color: transparent;
+  }
+
+  input:focus {
+	  border: 1px solid $black;
+	  outline: 0;
+	  border-radius: 0;
+    box-shadow: none;
+  }
+
+  input:visited {
+    box-shadow: none;
+    border: 1px solid $black;
+    outline: 0;
+    border-radius: 0;
+  }
+
+.newsletter {
+  max-width:900px;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+  form.simple_form.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .newsletter_flash {
+      text-align: center;
+    }
+
+    input {
+      margin-bottom: 20px;
+      height:40px;
+
+    }
+
+    input.btn.button_primary  {
+      margin: 0px;
+      transition: 0.3s;
+      width: 200px;
+      height:40px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+
+    input.btn.button_primary:hover {
+      background-color: $black;
+      cursor: pointer;
+    }
+  }
+
+  .newsletter_first_name,
+  .newsletter_last_name {
+    width: 20%;
+    margin-right: 20px;
+  }
+
+  .newsletter_email {
+    width: 30%;
+    margin-right: 20px;
+  }
+
+  .newsletter_copy {
+    text-align: center;
+    margin-bottom:40px;
+  }
+
+  .smallprint {
+    font-size: $h6;
+    text-align: center;
+    font-style: italic;
+    margin: 10px 0 0 0;
+  }
