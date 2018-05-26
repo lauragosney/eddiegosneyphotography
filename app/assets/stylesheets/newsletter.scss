@@ -5,39 +5,26 @@
 $white: #ffffff;
 $black: #000000;
 $grey: #b9b9b9;
-$red: #EE3322;
 
-$font:'Source Sans Pro',  Helvetica, Arial, sans-serif;
-
-$bold: 700;
-$regular: 400;
-
-$h1:30px;
-$h2:42px;
-$h3:28px;
-$h4:20px;
-$h5:18px;
 $h6:14px;
-$body:16px;
+
 
 input {
     border: 1px solid $grey;
-    border-style: none;
-    border-color: none;
-    border-image: none;
     width: 100%;
     padding: 5px 10px 5px 10px;
     border-radius: 0;
     box-shadow: none;
-    border: 1px solid $grey;
     background-color: transparent;
+    margin-bottom: 20px;
+    height:40px;
   }
 
   input:focus {
-	  border: 1px solid $black;
-	  outline: 0;
-	  border-radius: 0;
     box-shadow: none;
+    border: 1px solid $black;
+    outline: 0;
+    border-radius: 0;
   }
 
   input:visited {
@@ -47,42 +34,33 @@ input {
     border-radius: 0;
   }
 
-.newsletter {
-  max-width:900px;
-  margin-left:auto;
-  margin-right: auto;
-}
+  .newsletter_container {
+    max-width: 900px;
+    margin: 0px auto 120px auto;
 
-  form.simple_form.newsletter {
-    display: flex;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
+  }
+
+  .newsletter_copy {
     text-align: center;
+    margin-bottom: 40px;
+    opacity: 0;
+    transition: all 0.5s;
+  }
 
-    .newsletter_flash {
+  .newsletter_form {
+    opacity: 0;
+    transition: all 0.5s;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
       text-align: center;
     }
 
-    input {
-      margin-bottom: 20px;
-      height:40px;
-
-    }
-
-    input.btn.button_primary  {
-      margin: 0px;
-      transition: 0.3s;
-      width: 200px;
-      height:40px;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    input.btn.button_primary:hover {
-      background-color: $black;
-      cursor: pointer;
+    .newsletter_flash {
+      text-align: center;
     }
   }
 
@@ -97,9 +75,19 @@ input {
     margin-right: 20px;
   }
 
-  .newsletter_copy {
-    text-align: center;
-    margin-bottom:40px;
+  .btn {
+    width: 200px;
+    background-color: $black;
+    color: $white;
+    border: solid 1px transparent;
+    transition: all 0.5s;
+    cursor:pointer;
+  }
+
+  .btn:hover {
+    background-color: $white;
+    color: $black;
+    border: solid 1px $black
   }
 
   .smallprint {
@@ -107,4 +95,19 @@ input {
     text-align: center;
     font-style: italic;
     margin: 10px 0 0 0;
+  }
+
+  .in-viewport .fadein {
+    opacity: 1;
+  }
+
+  @media (max-width: 700px) {
+
+    .newsletter_first_name,
+    .newsletter_last_name,
+    .newsletter_email,
+    .btn {
+      width: 100%;
+      margin-right: 0px;
+    }
   }

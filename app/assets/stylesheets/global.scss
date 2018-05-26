@@ -108,7 +108,7 @@ footer {
 }
 
 .min-height {
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 .about {
@@ -392,8 +392,9 @@ section {
 @media (max-width: 700px) {
 
   .min-height {
-    min-height: 50vh;
+    min-height: 25vh;
   }
+
 
   $h2:32px;
   $h3:24px;
@@ -488,7 +489,8 @@ section {
   }
 
   .exhibitions li,
-  .instagram {
+  .instagram,
+  .newsletter_copy {
     margin-bottom: 80px;
 
     h3 {
