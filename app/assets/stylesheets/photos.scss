@@ -24,7 +24,7 @@
 }
 
 .in-viewport .fadein {
-  opacity: 0;
+  opacity: 1;
 }
 
 .photo:hover img {
@@ -35,7 +35,7 @@
 .photo-show {
   display: flex;
   flex-wrap: wrap;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.5s;
 
 

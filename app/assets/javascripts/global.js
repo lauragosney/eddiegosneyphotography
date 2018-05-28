@@ -2,10 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       inView('section')
         .on('enter', section => {
-        section.classList.remove('in-viewport')
+        section.classList.add('in-viewport')
         })
         .on('exit', section => {
-            section.classList.add('in-viewport')
+            section.classList.remove('in-viewport')
         })
         inView.threshold(0.2)
 
