@@ -10,11 +10,11 @@ end
 gem 'rails', '~> 5.1.5'
 # Use sqlite3 as the database for Active Record
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', git: "https://github.com/sparklemotion/sqlite3-ruby"
 end
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.21'
 end
 
 
