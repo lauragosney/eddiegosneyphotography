@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-      inView('section')
+      inView('div')
         .on('enter', section => {
         section.classList.add('in-viewport')
         })

@@ -14,7 +14,7 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '~> 0.21'
+  gem 'pg'
 end
 
 
